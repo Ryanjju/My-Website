@@ -1,0 +1,378 @@
+:root {
+  --bg-color: #f5f5f5;
+  --font-color: #000;
+  --accent-color: #007bff;
+  --panel-color: #000000;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1c1c1e;
+    --font-color: #fff;
+    --accent-color: #007bff;
+    --panel-color: #fff;
+  }
+}
+
+body {
+  font: 16px/1.5 "Open Sans", sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  z-index: 999;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: auto;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header__logo {
+  font-size: 24px;
+}
+
+.logo__link {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav__link {
+  padding: 10px 20px;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger__line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--font-color);
+}
+
+.footer {
+  background-color: var(--bg-color);
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+  height: auto;
+  max-height: 100px;
+  box-sizing: border-box;
+  width: 100%;
+
+  /* stick at the bottom */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__text {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+.footer .nav__link {
+  padding: 6px 10px;
+  font-size: 14px;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+/* Login Form */
+.login {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.rounded-object {
+  background-color: var(--accent-color);
+}
+
+/* Error Message */
+.error {
+  color: var(--font-color);
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Cookie Box */
+#cookie-box {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  width: 300px;
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+#cookie-box p {
+  margin: 0 0 10px 0;
+}
+
+#accept-cookies {
+  background-color: var(--accent-color);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#accept-cookies:hover {
+  background-color: darken(var(--accent-color), 10%);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header .rounded-object {
+    background-color: var(--panel-color);
+  }
+}
+
+@media (max-width: 767px) {
+  .header__logo {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 999;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #ccc;
+  }
+
+  .header__nav.open .nav__link {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* Login Form */
+  .login {
+    /* make margin top 10 px under the header but make it flexible, so not hard coded */
+    margin-top: calc(var(--header-height));
+  }
+
+  /* Safari input zoom fix */
+  input[type="text"],
+  input[type="password"] {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__nav {
+    display: none;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 60px);
+  }
+
+  .header__nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 999;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+
+  scroll-behavior: smooth;
+
+  /* cant scroll behind the footer */
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 60px);
+
+}
+
+@media (max-width: 767px) {
+
+  /* Safari input zoom fix */
+  input[type="text"],
+  input[type="password"] {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+
+.customised_table {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  border: 1px solid var(--font-color);
+
+  /* rounded corners */
+  border-radius: 10px;
+  overflow: hidden;
+
+  /* shadow */
+  box-shadow: 0 0 10px var(--font-color);
+
+  /* table header */
+  background-color: var(--bg-color);
+
+  text-align: right;
+  
+}
+
+#vertical-2 thead,
+#vertical-2 tbody {
+  display: inline-block;
+}
+
+/* make the footer at the bottom under both lines */
+#vertical-2 tfoot {
+  display: inline-block;
+  width: 100%;
+  
+  /* place it under the table */
+  margin-top: -2px;
+
+  /* make it the same color as the header */
+  background-color: var(--bg-color);
+
+  /* make the border radius only on the bottom */
+  border-radius: 0 0 10px 10px;
+}
+
+
+/*-----------------------END OF TABLE-----------------------*/
+
+/* modern button */
+.modern-button {
+  display: inline-block;
+  padding:2.5px 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+}
+
+.modern-textinput {
+  display: inline-block;
+  padding:2.5px 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: /* if mode is dark, then #000 else if mode is light, then #fff */ light dark;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+  box-shadow: 0 0 2.5px var(--font-color);
+  
+  /* make font collor in dark mode #fff and in light mode #000 */
+  color: var(--font-color);
+}
