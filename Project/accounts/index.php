@@ -3,7 +3,15 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<?php include '../head.php' ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMV GymLap</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pannels.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/hamburger.js"></script>
+</head>
 
 <body>
     <?php include '../head.php';?>
