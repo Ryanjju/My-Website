@@ -20,8 +20,8 @@ session_start();
         <div class="container">
             <h1>Willkommen bei SMV GymLap</h1>
             <p>Wir sind eine Schülermitverantwortung, die sich für die Belange der Schülerinnen und Schüler am Gymnasium
-                einsetzt.</p>
-
+                einsetzt.
+            </p>
         </div>
     </main>
 
