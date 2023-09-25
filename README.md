@@ -264,9 +264,9 @@ Funktionalitäten:
     zuvor mit diesem angemeldet haben. Das spart Zeit und erleichtert
     den Zugang.
 -   **Administrationsoberfläche:** Das Dashboard fungiert als
-    Administrationsoberfläche, die Informatikern erweiterte
+    Administrationsoberfläche, die Administratoren erweiterte
     Kontrollmöglichkeiten bietet. Hier können sie eine Liste aller
-    Benutzer anzeigen lassen und detaillierte Informationen zu einzelnen
+    Benutzer anzeigen lassen und detaillierte Informationenu zu einzelnen
     Benutzern abrufen.
 -   **Zugangsbeschränkung für Admins:** Der Zugriff auf die
     Administrationsoberfläche ist durch ein standardisiertes
