@@ -242,24 +242,24 @@ if (isset($_COOKIE['remember_login']) && $_COOKIE['remember_login'] === 'true') 
 
 ::: section
 Die Webseite präsentiert sich in ihrer Grundstruktur als eine einfache,
-aber dennoch effektive Plattform, die speziell für Informatiker
+aber dennoch effektive Plattform, die speziell für nicht technisch versierte Benutzer
 interessant sein dürfte. Hier sind die Schlüsselmerkmale und
 Funktionalitäten:
 
 -   **Übersichtliche Struktur:** Die Webseite verfügt über eine
-    übersichtliche Startseite, auf der Informatiker schnell die
+    übersichtliche Startseite, auf der die Anwender schnell die
     benötigten Informationen finden können.
 -   **Einheitliches Design:** Sowohl der Header als auch der Footer sind
     auf allen Seiten einheitlich gestaltet. Dies erleichtert die
     Navigation und sorgt für Konsistenz im gesamten Webangebot.
 -   **Mobile Optimierung:** Die Webseite wurde größtenteils für die
     mobile Ansicht optimiert, was besonders praktisch ist, wenn
-    Informatiker unterwegs sind und auf die Informationen zugreifen
+    ein User unterwegs ist oder sein Handy benutzt und auf die Informationen zugreifen
     möchten.
 -   **Sicherer Login:** Die Login-Funktion ist robust gegenüber
     Sicherheitsbedrohungen wie SQL-Injections geschützt, was für
     Informatiker von hoher Bedeutung ist, um sensible Daten zu schützen.
--   **Automatischer Login mit Cookie:** Informatiker können sich auf der
+-   **Automatischer Login mit Cookie:** User können sich auf der
     Webseite über einen Cookie automatisch einloggen, wenn sie sich
     zuvor mit diesem angemeldet haben. Das spart Zeit und erleichtert
     den Zugang.
