@@ -240,7 +240,6 @@ if (isset($_COOKIE['remember_login']) && $_COOKIE['remember_login'] === 'true') 
 
 ## 4. Die Webseite
 
-::: section
 Die Webseite präsentiert sich in ihrer Grundstruktur als eine einfache,
 aber dennoch effektive Plattform, die speziell für nicht technisch versierte Benutzer
 interessant sein dürfte. Hier sind die Schlüsselmerkmale und
