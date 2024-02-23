@@ -128,7 +128,7 @@ root/
 |
 ├── index.php
 |
-└── README.me 
+└── README.md 
 ```
 
 Wie man erkennen kann, wurde ein eigener ordner für jeden SubFolder
