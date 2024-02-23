@@ -114,7 +114,7 @@ root/
 |   ├── login_query.php
 |
 ├── logout/
-|   ├── index.php (Im nachhinein betrachtet nicht schlau)
+|   ├── index.php
 |
 ├── admin_check.php
 |
